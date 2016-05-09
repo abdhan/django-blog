@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>My django blog</title>
+  <meta name="description" content="Abdhan Django Blog">
+  <meta name="author" content="abdhan">
+
+  <link rel="stylesheet" href="#">
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <script src="js/scripts.js"></script>
+
+<div class=''>
+  <h1><a href="#">Django Boys</a></h1>
+</div>
+{ % for post in posts %}
+<div class="">
+  <h3>{{post.title}}</h3>
+  <p><i>{{post.published_date}}</i></p>
+  <p>{{post.text|linebreaks}}</p>
+</div>
+{% endfor %}
+
+</body>
+</html>
